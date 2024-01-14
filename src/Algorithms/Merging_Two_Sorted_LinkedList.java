@@ -90,7 +90,30 @@ public class Merging_Two_Sorted_LinkedList
 		return dummy.next;
 		
 	}
-	
+	public static Merging_Two_Sorted_LinkedList merging(Node a, Node b)
+	{
+		Merging_Two_Sorted_LinkedList res=new Merging_Two_Sorted_LinkedList();
+		while(a!=null && b!=null)
+		{
+			if(a.data<b.data)
+			{
+				res.add(a.data);
+				a=a.next;
+			}
+			else
+			{
+				res.add(b.data);
+				b=b.next;
+			}
+		}
+		if(a!=null)
+		{
+			res.add(a.data);
+		}
+		if(b!=null)
+			res.add(b.data);
+		return res;
+	}
 	
 	public static void main(String[] args) 
 	{
@@ -104,6 +127,7 @@ public class Merging_Two_Sorted_LinkedList
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(a.merge(a.head, b.head));
+		merging(a.head, b.head);
 		
 	}
 }
