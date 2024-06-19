@@ -26,8 +26,30 @@ public class LinearSearch
 	public static void main(String[] args) 
 	{
 		int ar[]= {3,4,2,5,6,7,10,13,15,20};
-		System.out.println("Found at index :"+search(ar,10));
-		
-		
+		System.out.println("Found at index :"+search(ar,10));	
 	}
 }
+         
+
+// Another method in Main Function it self 
+
+
+public class LinearSearch 
+{
+	public static void main(String[] args) 
+	{
+		int arr[]= {9,2,8,3,7,4,6,5,1};
+		int n=1;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]==n)
+			{
+				System.out.println("Fount at "+i+" Index");
+				break;
+			}
+			if(i==arr.length-1)
+				System.out.println("Not Found");
+		}
+	}
+}
+
