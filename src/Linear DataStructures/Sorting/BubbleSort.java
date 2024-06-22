@@ -6,15 +6,16 @@ Bubble sort starts with very first two elements, comparing them to check which o
 ( 1 5 4 2 8 ) –>  ( 1 4 5 2 8 ), Swap since 5 > 4 
 ( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2 
 ( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them.
-Second Pass: 
 
+Second Pass: 
 Now, during second iteration it should look like this:
 ( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ) 
 ( 1 4 2 5 8 ) –> ( 1 2 4 5 8 ), Swap since 4 > 2 
 ( 1 2 4 5 8 ) –> ( 1 2 4 5 8 ) 
 ( 1 2 4 5 8 ) –>  ( 1 2 4 5 8 ) 
-Third Pass: 
 
+
+Third Pass: 
 Now, the array is already sorted, but our algorithm does not know if it is completed.
 The algorithm needs one whole pass without any swap to know it is sorted.
 ( 1 2 4 5 8 ) –> ( 1 2 4 5 8 ) 
@@ -44,7 +45,7 @@ public class BubbleSort
 				}
 				System.out.println(j+"  J Loop in Array"+ Arrays.toString(ar));
 			}
-			System.out.println(i+" Iteration :  "+Arrays.toString(ar));
+			System.out.println("After "+(i+1)+" Iteration : "+Arrays.toString(ar));
 		}
 	}
 	
